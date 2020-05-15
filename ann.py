@@ -50,7 +50,7 @@ class ANN:
         print()
         print("bias output layer:\n",self.ho_bias)
         print()
-        input()
+        input("[ENTER]")
  
     def __feed_forward(self,inputs):
 
@@ -175,12 +175,13 @@ ann = ANN(size_input_layer=2 , size_hidden_layer=5 , size_output_layer=2,learnin
 dataset = np.matrix([[1,1,1,0],[1,0,0,1],[0,1,0,1],[0,0,1,0]])
 ann.train(dataset)
 
-while True:
-    #cast to float because int generates problems with np.matrix...
-    a = float(input("A: "))
-    b = float(input("B: "))
+if __name__ == "__main__":
+    while True:
+        #cast to float because int generates problems with np.matrix...
+        a = float(input("A: "))
+        b = float(input("B: "))
     
-    r = ann.resolve([a,b])
-    print("response:",r)
+        r = ann.resolve([a,b])
+        print("response:",r)
     
-    input("[ENTER]")
+        input("[ENTER]")
