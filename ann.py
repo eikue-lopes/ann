@@ -171,11 +171,12 @@ class ANN:
 
 
 
-ann = ANN(size_input_layer=2 , size_hidden_layer=5 , size_output_layer=2,learning_rate=0.01)
-dataset = np.matrix([[1,1,1,0],[1,0,0,1],[0,1,0,1],[0,0,1,0]])
-ann.train(dataset)
-
 if __name__ == "__main__":
+    
+    ann = ANN(size_input_layer=2 , size_hidden_layer=5 , size_output_layer=2,learning_rate=0.01)
+    dataset = np.matrix([[1,1,1,0],[1,0,0,1],[0,1,0,1],[0,0,1,0]])
+    ann.train(dataset)
+    
     while True:
         #cast to float because int generates problems with np.matrix...
         a = float(input("A: "))
